@@ -1,0 +1,5 @@
+{
+  "name": "MythicPaths - Infinite Adventure",
+  "description": "An infinite choose-your-own-adventure engine where your choices matter. Features real-time AI image generation, consistent art styles, and dynamic inventory tracking.",
+  "requestFramePermissions": []
+}
