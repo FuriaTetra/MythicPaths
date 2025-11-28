@@ -330,9 +330,9 @@ export const generateSceneImage = async (
 
 export const preLoadOptionImages = async (prompts: string[]) => {
   // Fire and forget, but with slight staggering to avoid instant rate limit hit
-  // OPTIMIZATION: Reduced stagger from 1500ms to 200ms to load images much faster
-  // while the user is reading/selecting.
+  // OPTIMIZATION: Reduced stagger from 200ms to 100ms to load images even faster.
+  // Since text generation is now slower, this is aggressive but safe.
   prompts.forEach((p, i) => {
-    setTimeout(() => generateSceneImage(p, true, undefined, "16:9"), i * 200);
+    setTimeout(() => generateSceneImage(p, true, undefined, "16:9"), i * 100);
   });
 };
